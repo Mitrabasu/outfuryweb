@@ -46,11 +46,12 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-left: 12px; !important;
+    margin-left: 12px;
     padding-left: 0 !important;
     justify-content: flex-start;
     flex-shrink: 0;
