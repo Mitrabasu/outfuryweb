@@ -50,7 +50,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-left: 0 !important;
+    margin-left: 20px !important;
     padding-left: 20px !important;
     justify-content: flex-start;
     flex-shrink: 0;
