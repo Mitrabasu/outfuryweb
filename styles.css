@@ -43,12 +43,13 @@ body {
     justify-content: space-between;
     align-items: center;
     /* * Lines to change:
-     * 1. Remove the 'max-width: 1200px;' line.
-     * 2. Add the new 'width: 100%;' line.
+     * 1. Reintroduce 'max-width: 1200px;'.
+     * 2. Reintroduce 'margin: 0 auto;'.
+     * 3. Change 'padding: 0 0 0 20px;' to 'padding: 0 20px;'.
      */
-    /* OLD: max-width: 1200px; */
-    width: 100%; /* NEW: Make the container span the full width */
-    padding: 0 0 0 20px; /* This sets 0 vertical padding, 0 right padding, 0 bottom padding, and 20px left padding */
+    max-width: 1200px; /* NEW: Reintroduce max-width to control content width */
+    margin: 0 auto; /* NEW: Center the nav-container within the header */
+    padding: 0 20px; /* NEW: This sets 0 vertical padding and 20px horizontal padding for equal space */
 }
 
 .logo {
