@@ -43,16 +43,7 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    /* * Lines to change:
-     * 1. Remove the 'margin: 0 auto;' line.
-     * 2. Remove the 'padding-left: 0;' line.
-     * 3. Remove the 'padding-right: 20px;' line.
-     * 4. Add the new 'padding: 0 20px;' line.
-     */
-    /* OLD: margin: 0 auto; */
-    /* OLD: padding-left: 0; */
-    /* OLD: padding-right: 20px; */
-    padding: 0 20px; /* NEW: This sets 0 vertical padding and 20px horizontal padding */
+    padding: 0 0 0 20px; /* NEW: This sets 0 vertical padding and 20px horizontal padding */
 }
 
 .logo {
