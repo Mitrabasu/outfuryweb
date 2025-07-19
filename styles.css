@@ -51,7 +51,7 @@ body {
     align-items: center;
     gap: 10px;
     margin-left: 0 !important;
-    padding-left: 0 !important;
+    padding-left: 20px !important;
     justify-content: flex-start;
     flex-shrink: 0;
 }
