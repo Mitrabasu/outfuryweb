@@ -42,8 +42,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95%; 
-    padding: 0 20px 0 20px; 
+    width: 100%; /* Ensures the container spans the full width of its parent */
+    padding: 0 20px 0 0; /* Sets 0 vertical padding, 20px right padding, 0 bottom padding, and 0 left padding */
 }
 
 .logo {
@@ -100,9 +100,10 @@ body {
 }
 
 .hamburger {
-    display: none;
+    display: none; /* Hidden by default on desktop */
     flex-direction: column;
     cursor: pointer;
+    padding-right: 20px; /* Add padding to the hamburger icon on the right */
 }
 
 .bar {
@@ -124,6 +125,7 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
+    padding: 0 20px; /* Add horizontal padding for smaller screens */
 }
 
 .hero-content {
@@ -498,15 +500,16 @@ body {
 }
 
 /* Responsive Design */
+/* Updated media query for better mobile responsiveness */
 @media screen and (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: flex; /* Show hamburger on smaller screens */
     }
 
     .nav-menu {
         position: fixed;
-        left: -100%;
-        top: 70px;
+        left: -100%; /* Hidden by default */
+        top: 70px; /* Position below the header */
         flex-direction: column;
         background-color: white;
         width: 100%;
@@ -515,46 +518,61 @@ body {
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
         gap: 1rem;
+        z-index: 999; /* Ensure it's below the header but above other content */
     }
 
     .nav-menu.active {
-        left: 0;
+        left: 0; /* Slide in when active */
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Adjust font size for smaller screens */
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 2rem; /* Adjust font size for smaller screens */
     }
 
     .cards-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+        padding: 0 20px; /* Add padding to card container */
+    }
+
+    .service-card {
+        margin-bottom: 1rem; /* Add space between stacked cards */
     }
 
     .contact-links {
-        flex-direction: column;
+        flex-direction: column; /* Stack contact links vertically */
         align-items: center;
     }
 
     .contact-link {
         width: 250px;
         justify-content: center;
+        margin-bottom: 10px; /* Add space between stacked links */
+    }
+
+    .footer .container {
+        padding: 0 20px; /* Add padding to footer content */
     }
 }
 
 @media screen and (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 2rem; /* Further adjust font size for very small screens */
+    }
+
+    .hero-subtitle {
+        font-size: 1rem; /* Further adjust font size for very small screens */
     }
 
     .service-card {
-        padding: 1.5rem;
+        padding: 1.5rem; /* Adjust padding for smaller cards */
     }
 
     .scroll-top-btn {
@@ -562,6 +580,10 @@ body {
         height: 50px;
         bottom: 20px;
         right: 20px;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem; /* Adjust logo font size */
     }
 }
 
