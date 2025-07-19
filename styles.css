@@ -46,6 +46,15 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0;
+    padding-left: 0 !important;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
 
 .logo h2 {
     color: #2c3e50;
