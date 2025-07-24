@@ -508,22 +508,53 @@ body {
 
     .nav-menu {
         position: fixed;
-        left: -100%; /* Hidden by default */
-        top: 70px; /* Position below the header */
-        flex-direction: column;
-        background-color: white;
+        top: -100%; /* Hidden by default, above the viewport */
+        left: 0;
         width: 100%;
+        background-color: white;
+        flex-direction: column;
         text-align: center;
-        transition: 0.3s;
+        transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
         gap: 1rem;
         z-index: 999; /* Ensure it's below the header but above other content */
+        opacity: 0;
+        pointer-events: none;
+        animation: none;
     }
 
     .nav-menu.active {
-        left: 0; /* Slide in when active */
+        top: 70px; /* Slide in from top, just below header */
+        opacity: 1;
+        pointer-events: auto;
+        animation: slideDownMenu 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    .nav-menu:not(.active) {
+        animation: slideUpMenu 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+@keyframes slideDownMenu {
+    from {
+        top: -100%;
+        opacity: 0;
+    }
+    to {
+        top: 70px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpMenu {
+    from {
+        top: 70px;
+        opacity: 1;
+    }
+    to {
+        top: -100%;
+        opacity: 0;
+    }
+}
 
     .hero-title {
         font-size: 2.5rem; /* Adjust font size for smaller screens */
