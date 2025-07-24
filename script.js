@@ -186,3 +186,20 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Simple total site visit counter (localStorage-based, demo only)
+function updateVisitCount() {
+    const totalKey = 'totalVisitCount';
+    let count = localStorage.getItem(totalKey);
+    if (!count) {
+        count = 1;
+    } else {
+        count = parseInt(count) + 1;
+    }
+    localStorage.setItem(totalKey, count);
+
+    const visitCountElem = document.getElementById('visit-count');
+    if (visitCountElem) {
+        visitCountElem.textContent = `Total site visits: ${count}`;
+    }
+}
+document.addEventListener('DOMContentLoaded', updateVisitCount);
